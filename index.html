@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agmal 2121002 tugas 2</title>
+</head>
+<body>
+    <h1>Agmal M S 2121002</h1>
+    <h1>Menghitung Luas Segitiga, Volume Bola, dan Sisi Miring Segitiga</h1>
+
+    <h2>Menghitung Luas Segitiga</h2>
+    <p>Alas: 8 cm</p>
+    <p>Tinggi: 5 cm</p>
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    <p id="hasilLuas"></p>
+
+    <h2>Menghitung Volume Bola</h2>
+    <p>Diameter: 15 cm</p>
+    <button onclick="hitungVolume()">Hitung Volume</button>
+    <p id="hasilVolume"></p>
+
+    <h2>Menghitung Sisi Miring Segitiga Siku-Siku</h2>
+    <p>Alas: 4 cm</p>
+    <p>Tinggi: 5 cm</p>
+    <button onclick="hitungSisiMiring()">Hitung Sisi Miring</button>
+    <p id="hasilSisiMiring"></p>
+
+    <script>
+        function hitungLuas() {
+            let alas = 8;
+            let tinggi = 5;
+            let luas = 0.5 * alas * tinggi;
+            document.getElementById("hasilLuas").innerHTML = "Luas Segitiga: " + luas + " cm²";
+        }
+
+        function hitungVolume() {
+            let diameter = 15;
+            let jariJari = diameter / 2;
+            let volume = (4 / 3) * Math.PI * Math.pow(jariJari, 3);
+            document.getElementById("hasilVolume").innerHTML = "Volume Bola: " + volume.toFixed(2) + " cm³";
+        }
+
+        function hitungSisiMiring() {
+            let alas = 4;
+            let tinggi = 5;
+            let sisiMiring = Math.sqrt(Math.pow(alas, 2) + Math.pow(tinggi, 2));
+            document.getElementById("hasilSisiMiring").innerHTML = "Sisi Miring: " + sisiMiring.toFixed(2) + " cm";
+        }
+    </script>
+</body>
+</html>
